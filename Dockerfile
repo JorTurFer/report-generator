@@ -12,4 +12,4 @@ RUN apk update && \
 FROM mcr.microsoft.com/dotnet/runtime:5.0-alpine
 WORKDIR /app
 COPY --from=build-env /app/ReportGenerator/src/ReportGenerator.DotnetGlobalTool/out .
-ENTRYPOINT ["dotnet", "dotnet-reportgenerator.dll"]
+ENTRYPOINT ["dotnet", "ReportGenerator.dll"]
